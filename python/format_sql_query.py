@@ -19,7 +19,6 @@ def format_sql_query(query:str) -> str:
             ColumnName1.Variable2 as columnname1_variable2,
             ColumnName2.Variable1 as columnname2_variable1
         FROM your_table
-
     """
     sql_query = query.strip().replace(',', '').split('\n')
     cols = [data +' as '+ data.strip().replace('.', '_').lower() for data in sql_query if data.strip().startswith(('select', 'from')) != True]
