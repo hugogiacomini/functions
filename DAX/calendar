@@ -1,0 +1,4 @@
+calendar = CALENDAR(
+    date(min(tb_main[best_tender_auctions_Pickup_Date_Time_Date].[Year]), 1,1),
+    date(max(tb_main[best_tender_auctions_Pickup_Date_Time_Date].[Year]), 12, 31)
+)
