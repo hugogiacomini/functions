@@ -1,5 +1,6 @@
 # Create outlier function to calculate iterquartile range (IQR)
 def iqr_outlier(df, col, col_name):
+    import pyspark.sql.functions as F
     """
     Calculates the interquartile range (IQR) of a DataFrame column and classifies each
     record as an "up_outlier" or "down_outlier" based on whether they fall outside the
